@@ -48,6 +48,9 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -136,21 +139,124 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="Content\Admin\assets\css\main.css" />
+    <Content Include="Content\Admin\assets\icons\fuse-icon-font\fonts\fuse-iconfont4edf.svg" />
+    <Content Include="Content\Admin\assets\icons\fuse-icon-font\style.css" />
+    <Content Include="Content\Admin\assets\images\avatars\1.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\2.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\3.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\4.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\5.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Abbott.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\alice.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\andrew.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Arnold.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Barrera.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Blair.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Boyle.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\carl.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Christy.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Copeland.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\danielle.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Estes.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\garry.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Harper.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Helen.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Henderson.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\james.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\jane.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Josefina.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\joyce.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\katherine.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Katina.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Lily.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Mai.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Nancy.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Nora.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Odessa.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\profile.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Reyna.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Shauna.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Shepard.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Tillman.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Trevino.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Tyson.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\Velazquez.jpg" />
+    <Content Include="Content\Admin\assets\images\avatars\vincent.jpg" />
+    <Content Include="Content\Admin\assets\images\backgrounds\april.jpg" />
+    <Content Include="Content\Admin\assets\images\backgrounds\august.jpg" />
+    <Content Include="Content\Admin\assets\images\backgrounds\december.jpg" />
+    <Content Include="Content\Admin\assets\images\backgrounds\february.jpg" />
+    <Content Include="Content\Admin\assets\images\backgrounds\january.jpg" />
+    <Content Include="Content\Admin\assets\images\backgrounds\july.jpg" />
+    <Content Include="Content\Admin\assets\images\backgrounds\june.jpg" />
+    <Content Include="Content\Admin\assets\images\backgrounds\march.jpg" />
+    <Content Include="Content\Admin\assets\images\backgrounds\may.jpg" />
+    <Content Include="Content\Admin\assets\images\backgrounds\november.jpg" />
+    <Content Include="Content\Admin\assets\images\backgrounds\october.jpg" />
+    <Content Include="Content\Admin\assets\images\backgrounds\september.jpg" />
+    <Content Include="Content\Admin\assets\images\ecommerce\product-image-placeholder.png" />
+    <Content Include="Content\Admin\assets\images\etc\air-balloons.jpg" />
+    <Content Include="Content\Admin\assets\images\etc\cactus.jpg" />
+    <Content Include="Content\Admin\assets\images\etc\early-sunrise.jpg" />
+    <Content Include="Content\Admin\assets\images\etc\fallout.jpg" />
+    <Content Include="Content\Admin\assets\images\etc\mountain-lake.jpg" />
+    <Content Include="Content\Admin\assets\images\etc\mountain-sunset.jpg" />
+    <Content Include="Content\Admin\assets\images\etc\road-trip.jpg" />
+    <Content Include="Content\Admin\assets\images\flags\es.png" />
+    <Content Include="Content\Admin\assets\images\flags\tr.png" />
+    <Content Include="Content\Admin\assets\images\flags\us.png" />
+    <Content Include="Content\Admin\assets\images\fuse-mini-logo.png" />
+    <Content Include="Content\Admin\assets\images\logos\android.png" />
+    <Content Include="Content\Admin\assets\images\logos\fallout.png" />
+    <Content Include="Content\Admin\assets\images\logos\google.png" />
+    <Content Include="Content\Admin\assets\images\patterns\rain-grey.png" />
+    <Content Include="Content\Admin\assets\images\placeholder.png" />
+    <Content Include="Content\Admin\assets\js\apps\calendar\calendar.js" />
+    <Content Include="Content\Admin\assets\js\apps\chat\chat.js" />
+    <Content Include="Content\Admin\assets\js\apps\dashboard\project.js" />
+    <Content Include="Content\Admin\assets\js\apps\dashboard\server.js" />
+    <Content Include="Content\Admin\assets\js\apps\e-commerce\orders\orders.js" />
+    <Content Include="Content\Admin\assets\js\apps\e-commerce\products\products.js" />
+    <Content Include="Content\Admin\assets\js\apps\e-commerce\product\product.js" />
+    <Content Include="Content\Admin\assets\js\components\charts\nvd3.js" />
+    <Content Include="Content\Admin\assets\js\main.js" />
+    <Content Include="Content\Admin\assets\vendor\animate.css\animate.min.css" />
+    <Content Include="Content\Admin\assets\vendor\bootstrap\bootstrap.min.js" />
+    <Content Include="Content\Admin\assets\vendor\d3\d3.min.js" />
+    <Content Include="Content\Admin\assets\vendor\datatables-responsive\js\dataTables.responsive.js" />
+    <Content Include="Content\Admin\assets\vendor\datatables.net\js\jquery.dataTables.min.js" />
+    <Content Include="Content\Admin\assets\vendor\fullcalendar\dist\fullcalendar.min.css" />
+    <Content Include="Content\Admin\assets\vendor\fullcalendar\dist\fullcalendar.min.js" />
+    <Content Include="Content\Admin\assets\vendor\fullcalendar\dist\fullcalendar.print.min.css" />
+    <Content Include="Content\Admin\assets\vendor\fuse-html\fuse-html.min.css" />
+    <Content Include="Content\Admin\assets\vendor\fuse-html\fuse-html.min.js" />
+    <Content Include="Content\Admin\assets\vendor\jquery\dist\jquery.min.js" />
+    <Content Include="Content\Admin\assets\vendor\mobile-detect\mobile-detect.min.js" />
+    <Content Include="Content\Admin\assets\vendor\moment\min\moment.min.js" />
+    <Content Include="Content\Admin\assets\vendor\nvd3\build\nv.d3.min.css" />
+    <Content Include="Content\Admin\assets\vendor\nvd3\build\nv.d3.min.js" />
+    <Content Include="Content\Admin\assets\vendor\perfect-scrollbar\css\perfect-scrollbar.min.css" />
+    <Content Include="Content\Admin\assets\vendor\perfect-scrollbar\js\perfect-scrollbar.jquery.min.js" />
+    <Content Include="Content\Admin\assets\vendor\pnotify\pnotify.custom.min.css" />
+    <Content Include="Content\Admin\assets\vendor\pnotify\pnotify.custom.min.js" />
+    <Content Include="Content\Admin\assets\vendor\popper.js\index.js" />
+    <Content Include="Private\index.aspx" />
+    <Content Include="Private\Perfil.aspx" />
+    <Content Include="Private\Principal.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Default.aspx" />
-    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Private\MasterAdmin.Master" />
+    <Content Include="Content\Admin\assets\icons\fuse-icon-font\fonts\fuse-iconfont4edf.ttf" />
+    <Content Include="Content\Admin\assets\icons\fuse-icon-font\fonts\fuse-iconfont4edf.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -180,55 +286,52 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
-    <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
-    <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="Private\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="Private\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Private\MasterAdmin.Master.cs">
+      <DependentUpon>MasterAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Private\MasterAdmin.Master.designer.cs">
+      <DependentUpon>MasterAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Private\Perfil.aspx.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Private\Perfil.aspx.designer.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Private\Principal.aspx.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Private\Principal.aspx.designer.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Conexion\Conexion.cs" />
+    <Compile Include="App_Data\Conexion\Datos.cs" />
+    <Compile Include="App_Data\Interface\IDatos.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\Permiso.cs" />
+    <Compile Include="Models\Persona.cs" />
+    <Compile Include="Models\Rol.cs" />
+    <Compile Include="Models\TipoIdentificacion.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.designer.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -238,9 +341,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
